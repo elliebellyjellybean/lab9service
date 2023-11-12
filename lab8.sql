@@ -31,3 +31,6 @@ WHERE Game.time = '2006-06-28 13:20:00' AND PlayerGame.gameID = Game.ID AND Play
 -- It makes it so that you only get one of the two possible combinations of players. If you didn't have that clause, you would get both (P1, P2) and (P2, P1) as possible combinations.
 -- The query that joined the Player table to itself seems rather contrived. Can you think of a realistic situation in which you’d want to join a table to itself?
 -- You could join a table to itself if you wanted to compare two different attributes of the same table. For example, if you wanted to compare the scores of two different players in the same game, you could join the PlayerGame table to itself.
+SELECT *
+FROM Progress
+NATURAL JOIN Property
